@@ -1,4 +1,4 @@
-MBC New York YouTube Connector ReactJS App.
+#MBC New York YouTube Connector ReactJS App.
 Initialized using Create React App. (https://github.com/facebookincubator/create-react-app)
 
 ---
