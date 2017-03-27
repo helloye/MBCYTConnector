@@ -8,15 +8,9 @@ V0.01
 ---
 
 TODO:
--
--Update this README, add build/deploy instructions.
--
--Add notes for pre-reqs and deploy notes.
--
--Refactor code to use settings file to store API key + other static data.
--
--Refactor code to a more modular format.
--
--Refactor code to not use JQuery
--
--Implement new components for other YouTube API services.
+Update this README, add build/deploy instructions.<br>
+Add notes for pre-reqs and deploy notes.<br>
+Refactor code to use settings file to store API key + other static data.<br>
+Refactor code to a more modular format.<br>
+Refactor code to not use JQuery<br>
+Implement new components for other YouTube API services.<br>
