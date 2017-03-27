@@ -5,7 +5,10 @@ V0.01
 -Initial version
 -Currently grabs video data from playlistItems API call and list them in an <ul>
 
+---
+
 TODO:
+-
 -Update this README, add build/deploy instructions.
 -Add notes for pre-reqs and deploy notes.
 -Refactor code to use settings file to store API key + other static data.
