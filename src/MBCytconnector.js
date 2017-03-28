@@ -9,7 +9,7 @@ class App extends Component {
   }
   componentDidMount = () => {
     var thisContext=this;
-    $.get("https://content.googleapis.com/youtube/v3/playlistItems?maxResults=12&part=snippet&playlistId={PLAYLISTID}&key={YOUR_API_KEY}", function (data) {
+    $.get("https://content.googleapis.com/youtube/v3/playlistItems?maxResults=12&part=snippet&playlistId=UUy0se5ZyFWqD5NA4p6xS0bw&key=AIzaSyBuWdKTzHxM6gT1BtGxFiTAk1H1yhcZtss", function (data) {
       thisContext.setState(data);
     })
   }
@@ -29,17 +29,17 @@ class Video extends App {
     }
     return(
       <div>
-        <ul id="thumbs" class="portfolio">
-          <li class="col-lg-3 design" data-id="id-0" data-type="web">
+        <ul>
+          <li>
             <iframe width="260" height="195" src={'https://www.youtube.com/embed/' + this.state.items[0].snippet.resourceId.videoId} frameborder="0" allowfullscreen></iframe>
           </li>
-          <li class="col-lg-3 design" data-id="id-0" data-type="web">
+          <li>
             <iframe width="260" height="195" src={'https://www.youtube.com/embed/' + this.state.items[1].snippet.resourceId.videoId} frameborder="0" allowfullscreen></iframe>
           </li>
-          <li class="col-lg-3 design" data-id="id-0" data-type="web">
+          <li>
             <iframe width="260" height="195" src={'https://www.youtube.com/embed/' + this.state.items[2].snippet.resourceId.videoId} frameborder="0" allowfullscreen></iframe>
           </li>
-          <li class="col-lg-3 design" data-id="id-0" data-type="web">
+          <li>
             <iframe width="260" height="195" src={'https://www.youtube.com/embed/' + this.state.items[3].snippet.resourceId.videoId} frameborder="0" allowfullscreen></iframe>
           </li>
         </ul>
