@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MBCytconnector.css';
 import $ from 'jquery';
 
-class App extends Component {
+class MBCYTConnector extends Component {
   constructor(props) {
     super(props);
     this.state = {}
@@ -22,7 +22,7 @@ class App extends Component {
   }
 }
 
-class Video extends App {
+class Video extends MBCYTConnector {
   render() {
     if (!this.state.items || this.state.items.length === 0) {
       return null;
