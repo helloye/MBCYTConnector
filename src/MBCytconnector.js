@@ -2,33 +2,35 @@ import React, { Component } from 'react';
 import './MBCytconnector.css';
 import $ from 'jquery';
 
-class MBCYTConnector extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {}
   }
   componentDidMount = () => {
-    var thisContext=this;
-    $.get("https://content.googleapis.com/youtube/v3/playlistItems?maxResults=12&part=snippet&playlistId=<PLAYLIST_ID>&key=<YOUR_API_KEY>", function (data) {
+    let thisContext=this;
+    $.get("https://content.googleapis.com/youtube/v3/playlistItems?maxResults=20&part=snippet&playlistId=<PLAYLIST_ID>&key=<API_KEY>", function (data) {
       thisContext.setState(data);
     })
-  }
+  };
   render() {
     return (
       <div>
-        <Video />
+        <Video {...this.props}/>
       </div>
     );
   }
 }
 
-class Video extends MBCYTConnector {
+class Video extends App {
   render() {
     if (!this.state.items || this.state.items.length === 0) {
       return null;
     }
-    var videos = [];
-    for (var i = 0; i < 4; i++){
+    let videos = [];
+    const { start, count } = this.props;
+
+    for (let i = start; i < start+count; i++){
       videos.push(
         <ul id="thumbs" class="portfolio">
           <li class="col-lg-3 design" data-id="id-0" data-type="web">
